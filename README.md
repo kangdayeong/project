@@ -2443,3 +2443,22 @@ Random r = new Random();
 Color c = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
 g.FillRectangle(new SolidBrush(c), e.ClipRectangle);
 }
+private void SetButtonText()
+{
+button1.Text =
+"Location = " + Location + "\n" +
+"Left/Right/Width =" + Left + ", " + Right + ", " + Width + "\n" +
+"Top/Bottom/Height = " + Top + ", " + Bottom + ", " + Height;
+}
+private void Form1_Load(object sender, EventArgs e)
+{
+SetButtonText();
+}
+private void Form1_Move(object sender, EventArgs e)
+{
+SetButtonText();
+}
+private void Form1_Resize(object sender, EventArgs e)
+{
+SetButtonText();
+}
