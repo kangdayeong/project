@@ -1654,6 +1654,19 @@ Console.WriteLine("Current Priority : " + t.Priority);
 Console.WriteLine("Higher Priority : " + t.Priority);
 }
 } 
+private void Form1_Load(object sender, EventArgs e)
+{
+SetButtonText();
+}
+private void button1_Click(object sender, EventArgs e)
+{
+if (FormBorderStyle == FormBorderStyle.SizableToolWindow)
+FormBorderStyle = FormBorderStyle.None;
+else
+FormBorderStyle++;
+SetButtonText();
+}
+
   using System;
 class DivByZeroExceptionApp {
 public static void Main() {
