@@ -56,6 +56,24 @@ Console.WriteLine(myInt.ToString("C", nfi2));
 }
 }
 using System;
+namespace N_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+double dblValue = -12445.6789;
+Console.WriteLine(dblValue.ToString("N"));
+// Displays -12,445.68
+Console.WriteLine(dblValue.ToString("N1"));
+// Displays -12 445,7
+int intValue = 123456789;
+Console.WriteLine(intValue.ToString("N1"));
+// Displays 123,456,789.0
+}
+}
+}
+using System;
 namespace G_format_output
 {
 class Program
