@@ -56,6 +56,32 @@ Console.WriteLine(myInt.ToString("C", nfi2));
 }
 }
 using System;
+namespace G_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+double number;
+number = 12345.6789;
+Console.WriteLine(number.ToString("G"));
+// Displays 12345.6789
+Console.WriteLine(number.ToString("G"));
+// Displays 12345,6789
+Console.WriteLine(number.ToString("G7"));
+// Displays 12345.68
+number = .0000023;
+Console.WriteLine(number.ToString("G"));
+// Displays 2.3E-06
+Console.WriteLine(number.ToString("G"));
+// Displays 2,3E-06
+number = .0023;
+Console.WriteLine(number.ToString("G"));
+// Displays 0.0023
+}
+}
+}
+using System;
 namespace D_format_output
 {
 class Program
