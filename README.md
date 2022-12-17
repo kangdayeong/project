@@ -1316,7 +1316,7 @@ for (int j = 0; j < 3; j++)
 Console.Write(m[i,j] + " ");
 Console.WriteLine(); // 마지막 줄바꿈
 }
-}
+}//
 }
 using System;//
 class ReadIntegerApp {
