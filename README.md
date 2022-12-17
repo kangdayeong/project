@@ -56,6 +56,26 @@ Console.WriteLine(myInt.ToString("C", nfi2));
 }
 }
 using System;
+namespace D_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+int value;
+value = 12345;
+Console.WriteLine(value.ToString("D"));
+// Displays 12345
+Console.WriteLine(value.ToString("D8"));
+// Displays 00012345
+value = -12345;
+Console.WriteLine(value.ToString("D"));
+// Displays -12345
+Console.WriteLine(value.ToString("D8"));
+// Displays -00012345
+}
+}
+using System;
 class RealConstantApp {
 public static void Main() {
 float f1=1.414F, f2=0.1414e01f;
