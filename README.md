@@ -1220,7 +1220,7 @@ Console.WriteLine(); // 마지막 줄바꿈
 }
 }
 }
-using System;
+using System;//
 class ReadIntegerApp {
 static int ReadInt() {
 char ch;
