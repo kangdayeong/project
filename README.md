@@ -1582,6 +1582,45 @@ Console.ReadKey(); ;
 }
   using System;
 using System.Threading;
+class Test
+{
+static void Main()
+{
+// **** static method를 thread로 사용 예 ****
+// (1). .NET 1.0 버전
+// ==> ThreadStart delegate를 생성할 때, class 이름과 method 이름 사용
+// (2). .NET 2.0 버전 이후
+// ==> ThreadStart delegate를 명시적으로 생성할 필요가 없음
+// ==> Thread 생성자에서 class 이름과 method 이름 사용
+// ==> compiler가 알아서 올바른 delegate 선택
+// (1). NET 1.0 버전 코드
+ThreadStart threadDelegate = new ThreadStart(Work.DoWork);
+Thread newThread = new Thread(threadDelegate);
+newThread.Start();
+// (2). NET 2.0 버전 이후 코드
+// Thread newThread = new Thread(Work.DoWork);
+// newThread.Start();
+// ####### instance method를 thread로 사용 예 ###########
+// (1). .NET 1.0 버전
+// ==> ThreadStart delegate를 생성할 때, instance(object) 이름과 method 이름 사용
+// (2). .NET 2.0 버전 이후
+// ==> ThreadStart delegate를 명시적으로 생성할 필요가 없음
+// ==> Thread 생성자에서 object 이름과 method 이름 사용
+// ==> compiler가 알아서 올바른 delegate 선택
+// (1). NET 1.0 버전 코드
+Work w = new Work();
+w.Data = 42;
+threadDelegate = new ThreadStart(w.DoMoreWork);
+newThread = new Thread(threadDelegate);
+newThread.Start();
+// (2). NET 2.0 버전 이후 코드
+// Work w = new Work();
+// w.Data = 42;
+// newThread = new Thread(w.DoMoreWork);
+// newThread.Start();
+}
+  using System;
+using System.Threading;
 class ThreadProperty {
 public void ThreadBody() {
 Thread myself = Thread.CurrentThread; // 실행중인 자신의 스레드 객체 반환
