@@ -495,7 +495,7 @@ x = 1 / 2.0;
 Console.Write("i = " + i);
 Console.WriteLine(", x = " + x);
 }
-}
+}//
 using System;
 class FormattedOutputApp {
 public static void Main() {
