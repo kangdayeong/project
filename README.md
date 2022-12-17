@@ -613,6 +613,21 @@ Console.WriteLine(number.ToString("P1"));
 }
 }
 }
+using System;
+namespace string_interpolation_2
+{
+class Program
+{
+static void Main(string[] args)
+{
+double a = 3;
+double b = 4;
+Console.WriteLine($"Pythagorean Theory of {a} and {b}:");
+Console.WriteLine($"Geometric ={Math.Sqrt(a*a + b * b), 12:F3}");
+Console.WriteLine($"Geometric ={Math.Sqrt(a * a + b * b) :F3}");
+}
+}
+}
 
 using System;
 class BitOperatorApp {
