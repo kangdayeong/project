@@ -17,7 +17,44 @@ Console.WriteLine("오늘은 {0}년 {1}월 {2}일 ({3})이며",
 dt.Year, dt.Month, dt.Day, dt.DayOfWeek);
 Console.WriteLine("현재는 {0}시 {1}분 {2}초 입니다.",
 dt.Hour, dt.Minute, dt.Day, dt.Second);
-
+using System;
+using System.Globalization; // CultureInfo Class
+namespace Standard_format_string
+{
+class Program
+{
+static void Main(string[] args)
+{
+/* real value */
+double value1 = -12345.6789;
+// Gets a NumberFormatInfo associated with the en-US culture.
+NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+Console.WriteLine(value1.ToString("C", nfi));
+Console.WriteLine(value1.ToString("C3", nfi));
+nfi.NumberDecimalDigits = 0;
+nfi.CurrencyNegativePattern = 1; // 0==> negative sign =(), 1==> negative = -
+Console.WriteLine(value1.ToString("C", nfi));
+Console.WriteLine(value1.ToString("C3",nfi));
+nfi = new CultureInfo("ko-KR", false).NumberFormat;
+nfi.NumberDecimalDigits = 2;
+double value2 = -123.456;
+Console.WriteLine(value2.ToString("C", nfi));
+Console.WriteLine(value2.ToString("C3", nfi));
+Console.WriteLine("value2={0,10:C}", value2);
+Console.WriteLine("value2={0,10:C3}", value2);
+/* integer value */
+Int64 myInt1 = -1234;
+Console.WriteLine("myInt1={0,10:C}", myInt1);
+Console.WriteLine("myInt1={0,10:C3}", myInt1);
+NumberFormatInfo nfi2 = new CultureInfo("en-US", false).NumberFormat;
+// Displays a negative value with the default number of decimal digits (2).
+Int64 myInt = -1234;
+Console.WriteLine(myInt.ToString("C", nfi2));
+nfi2.CurrencyDecimalDigits = 4;
+Console.WriteLine(myInt.ToString("C", nfi2));
+}
+}
+}
 using System;
 class RealConstantApp {
 public static void Main() {
