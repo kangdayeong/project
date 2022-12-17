@@ -1186,6 +1186,27 @@ return ((a as double?) / (b as double?));
 }
 }
 }
+  using System;
+class PropagateApp {
+void Orange() {
+int i = 25, j = 0;
+i = i / j;
+Console.WriteLine("End of Orange method");
+}
+void Apple() {
+Orange();
+Console.WriteLine("End of Apple method");
+}
+public static void Main() {
+PropagateApp p = new PropagateApp();
+try {
+p.Apple();
+} catch (ArithmeticException) {
+Console.WriteLine("ArithmeticException is processed");
+}
+Console.WriteLine("End of Main");
+}
+} 
 using System;
 class DoWhileApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
 public static void Main() {
