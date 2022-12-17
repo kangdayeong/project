@@ -1003,6 +1003,16 @@ if (++i > n) break;
 Console.WriteLine(" n = " + n + ", h = " + h);
 }
 }
+switch (value) {
+case 0 : Console.WriteLine(“In Case 0\n”);
+goto case 1;
+case 1 : Console.WriteLine(“In Case 1\n”);
+goto case 2;
+case 2 : Console.WriteLine(“In Case 2\n”);
+goto default;
+default : Console.WriteLine(“In default\n”);
+break;
+}
 
 using System;
 class StringConstantApp {
