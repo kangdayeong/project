@@ -808,6 +808,34 @@ Console.Write("i = " + i);
 Console.WriteLine(", c = " + c);
 }
 }
+using System;
+namespace F_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+int integerNumber;
+integerNumber = 17843;
+Console.WriteLine(integerNumber.ToString("F"));
+// Displays 17843.00
+integerNumber = -29541;
+Console.WriteLine(integerNumber.ToString("F3"));
+// Displays -29541.000
+double doubleNumber;
+doubleNumber = 18934.1879;
+Console.WriteLine(doubleNumber.ToString("F"));
+// Displays 18934.19
+Console.WriteLine(doubleNumber.ToString("F0"));
+// Displays 18934
+doubleNumber = -1898300.1987;
+Console.WriteLine(doubleNumber.ToString("F1"));
+// Displays -1898300.2
+Console.WriteLine(doubleNumber.ToString("F3"));
+// Displays -1898300,199
+}
+}
+}
 
 
 using System;
