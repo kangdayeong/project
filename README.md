@@ -1058,7 +1058,16 @@ i++;
 Console.WriteLine("n = " + n + ", h = " + h);
 }
 }
-
+public class GenericInterfaceApp {
+public static void Main() {
+GenericClass<Int32> gInteger = new GenericClass<Int32>();
+GenericClass<String> gString = new GenericClass<String>();
+gInteger.SetValue(10);
+gString.SetValue("Text");
+Console.WriteLine(gInteger.GetValueType());
+Console.WriteLine(gString.GetValueType());
+}
+}
 using System;
 class SwitchStApp {
 public static void Main() {
