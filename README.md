@@ -2244,7 +2244,7 @@ string g = "책갈피 군";
 string h =g.Replace("군", "양");
 Console.WriteLine(h);
 string i = "ABCDE";
-string j = i.Substring(1, 3);
+string j = i.Substring(1, 3);//
 Console.WriteLine(j);
 string k = "ABC";
 Console.WriteLine(k.Length);
