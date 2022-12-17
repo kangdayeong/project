@@ -1202,6 +1202,25 @@ Console.WriteLine("Read Result : {0}", value);
 }
 }
 }
+  using System;
+using System.Collections.Generic;
+public class Test1<T>
+{
+// public void Test1Method<T>(T x)
+// class-level 과 method-level type parameter 일치 경고
+public void Test1Method<U>(U x, T y)
+{
+Console.WriteLine("x={0}, y={1}", x, y);
+}
+}
+public class Test2
+{
+public void Test2Method<T>(T x, T y)
+{
+Console.WriteLine("x={0}, y={1}", x, y);
+}
+}
+
 using System;
 class IfStApp {
 public static void Main() {
