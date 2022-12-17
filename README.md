@@ -1292,6 +1292,16 @@ Console.Write("*** input data : ");
 Console.WriteLine("*** read data : " + ReadInt() + " " + ReadInt());
 }
 }
+  
+  class DataStore<T>
+{
+public T Data { get; set; }
+}
+class KeyValuePair<TKey, TValue>
+{
+public TKey Key { get; set; }
+public TValue Value { get; set; }
+}
 using System;
 namespace litrals
 {
