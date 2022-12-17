@@ -1483,7 +1483,9 @@ Console.WriteLine(“caught an OverflowException”);
 }
 }
 }
-//
+//double a = 3;
+double b = 4;
+Console.WriteLine($"Area of the right triangle with legs of {a} and {b} is {0.5 * a * b} ");
 using System;
 class LocalVariableApp {
 static int x;
