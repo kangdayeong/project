@@ -1401,7 +1401,7 @@ m += 0.10m;
 Console.WriteLine("0.1d*1000 = " + d);
 Console.WriteLine("0.1m*1000 = " + m);
 }
-}
+}//
 using System;
 class ForStApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
 public static void Main(string[] args) {
