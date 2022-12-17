@@ -1095,6 +1095,27 @@ int x = (LocalVariableApp.x=2) * 2;
 Console.WriteLine("static x = " + LocalVariableApp.x);
 Console.WriteLine("local x = " + x);
 }
+}using System;
+namespace Generic_operator
+{
+class Program
+{
+static void Main(string[] args)
+{
+Console.WriteLine("int 형의 Div = {0}", MyMyGenericOperation<int>.Div(4, 3));
+Console.WriteLine("double 형의 Div = {0}", MyMyGenericOperation<double>.Div(4.0, 3.0));
+}
+}
+public class MyMyGenericOperation<T>
+{
+public static double? Div(T a, T b)
+{
+if ( a is int)
+return ((a as int?) / ( b as int?));
+else
+return ((a as double?) / (b as double?));
+}
+}
 }
 using System;
 class DoWhileApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
