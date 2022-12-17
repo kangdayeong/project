@@ -1211,7 +1211,7 @@ using System;//
 class GFG
 {
 // Main Method
-public static void Main()
+public static void Main()//
 {
 // "DateTime" is a inbuilt class
 // for date and time
