@@ -213,7 +213,17 @@ int n=1652300;
 string text = n.ToString(); // 숫자를 문자열로 직렬화
 int result = int.Parse(text); // 문자열로부터 숫자로 역직렬화
 int result1 = Convert.ToInt32(text); // 문자열로부터 숫자로 역직렬화
-
+using System;
+class StringConstantApp {
+public static void Main() {
+char c = 'A';
+int i;
+i = c + 1;
+Console.WriteLine("c = " + c + "\nnext c = " + (char)i);
+Console.WriteLine("\"I am a string.\"");
+Console.WriteLine(@"""I am a string.""");
+}
+}
 using System;
 class Program
 {
