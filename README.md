@@ -1507,3 +1507,37 @@ double resRound = double.Parse(str, CultureInfo.InvariantCulture);
 Console.WriteLine(doubleVal.Equals(resRound));//
 }
 }
+using System;
+class Program
+{
+static void Main(string[] args)
+{
+string a;
+a = String.Format("{0}의 {1}", "C#", "그림책");
+Console.WriteLine(a);
+string b = "ABC";
+string c = "ABCDE";
+int d = String.Compare(b, c);
+Console.WriteLine(d);
+string e = "abc";
+int f = String.Compare(b, e, true);
+Console.WriteLine(f);
+string g = "책갈피 군";
+string h =g.Replace("군", "양");
+Console.WriteLine(h);
+string i = "ABCDE";
+string j = i.Substring(1, 3);
+Console.WriteLine(j);
+string k = "ABC";
+Console.WriteLine(k.Length);
+string l = string.Empty;
+Console.WriteLine(l);
+string m = "ABCDEF";
+int n = m.IndexOf('D');
+Console.WriteLine(n);
+string o = "I,Love,You";
+string [] p = o.Split(',');
+foreach (string s in p)
+Console.WriteLine(s);
+}
+}
