@@ -988,7 +988,14 @@ Console.WriteLine("Read Result : {0}", value);
 }
 }
 }
-
+class TemplateClass<T>
+{
+T temp;
+public void setT<U> (U t)
+{
+temp = t; // 오류 발생 지점
+}
+}
 using System
 namespace ConsoleApp1
 {
