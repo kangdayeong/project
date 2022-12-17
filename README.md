@@ -975,7 +975,15 @@ Console.WriteLine("MyVar = " + MyVar + ", myvar = " + myvar);
 Console.WriteLine("@int = " + @int + ", 변수 = " + 변수);
 }
 }
-
+class UserErrException : ApplicationException // 예외 클래스 정의
+{
+public UserErrException(String s) : base(s) { } // 생성자
+}
+// …..
+class UserClass {
+// ………
+if (val < 0) throw new UserErrException(“user exception message”);
+}
 using System
 namespace ConsoleApp1
 {
