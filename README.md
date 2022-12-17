@@ -1348,6 +1348,24 @@ Console.WriteLine(n + " cubed is " + (n*n*n));
 }
 }
 }
+using System;
+namespace P_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+double number = .2468013;
+Console.WriteLine(number.ToString("P"));
+// Displays 24.68 %
+Console.WriteLine(number.ToString("P"));
+// Displays 24,68%
+Console.WriteLine(number.ToString("P1"));
+// Displays 24.7 %
+}
+}
+}
+
 using System;//
 class OverflowApp {
 public static void Main() {
