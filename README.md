@@ -1385,6 +1385,27 @@ Console.WriteLine("*** read data : " + ReadInt() + " " + ReadInt());
 }//
 }
 using System;
+using System.Numerics;
+namespace Euler_25
+{
+class Program
+{
+static void Main(string[] args)
+{
+BigInteger l1 = 1;
+BigInteger l2 = 1;
+BigInteger current = l1 + l2;
+while (current.ToString().Length < 1000)
+{
+l2 = l1;
+l1 = current;
+current = l1 + l2;
+}
+Console.WriteLine(current);
+}
+}
+}
+using System;
 class BreakStApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
 public static void Main() {
 int n, i;
