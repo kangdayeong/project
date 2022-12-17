@@ -1132,7 +1132,7 @@ foreach (string s in color)
 Console.WriteLine(s);
 }
 }
-using System;
+using System;//
 class GFG
 {
 // Main Method
