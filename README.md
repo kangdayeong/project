@@ -1504,6 +1504,6 @@ double doubleVal = 0.91234582637;
 string str = doubleVal.ToString("R", CultureInfo.InvariantCulture);
 double resRound = double.Parse(str, CultureInfo.InvariantCulture);
 // round-trip Double with 'R'
-Console.WriteLine(doubleVal.Equals(resRound));
+Console.WriteLine(doubleVal.Equals(resRound));//
 }
 }
