@@ -845,7 +845,24 @@ Console.WriteLine("Read Result : {0}", value);
 }
 }
 }
-
+using System;
+using System.Globalization;
+namespace E_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+double value = 12345.6789;
+Console.WriteLine(value.ToString("E"));
+// Displays 1.234568E+004
+Console.WriteLine(value.ToString("E10"));
+// Displays 1.2345678900E+004
+Console.WriteLine(value.ToString("e4"));
+// Displays 1.2346e+004
+}
+}
+}
 using System;
 namespace ConsoleApp1
 {
