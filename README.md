@@ -1210,6 +1210,34 @@ public String GetValueType(){
 return value.GetType().ToString();
 }
 }
+  using System;
+using System.Collections.Generic;
+namespace cnstraints
+{
+class GenericClass<T> where T : class
+{
+private readonly T _field;
+public GenericClass(T value)
+{
+this._field = value;
+}
+public T genericMethod(T parameter)
+{
+Console.WriteLine($"The type of parameter we got is: {typeof(T)} and value is: {parameter}");
+Console.WriteLine($"The return type of parameter is: {typeof(T)} and value is: {this._field}");
+return this._field;
+}
+}
+class Program
+{
+static void Main(string[] args)
+{
+GenericClass<string> myGeneric = new GenericClass<string>("Hello World");
+myGeneric.genericMethod("string");
+Console.ReadKey();
+}
+}
+}
 using System
 namespace ConsoleApp1
 {
