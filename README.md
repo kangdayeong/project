@@ -398,4 +398,14 @@ set { _getMarried = value: }
 }
 }
 
+public class SiteMemner
+{
+bool? _getMarried;
+public bool? GetMarried
+{
+get { return _getMarried;}
+set { _getMarried = value: }
+}
+}
+
 
