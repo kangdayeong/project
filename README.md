@@ -1242,6 +1242,29 @@ static int sum(int s, int i) {
 return s + i;
 }//
 }
+using System;
+namespace X_format_output
+{
+class Program
+{
+static void Main(string[] args)
+{
+int value;
+value = 0x2045e;
+Console.WriteLine(value.ToString("x"));
+// Displays 2045e
+Console.WriteLine(value.ToString("X"));
+// Displays 2045E
+Console.WriteLine(value.ToString("X8"));
+// Displays 0002045E
+value = 123456789;
+Console.WriteLine(value.ToString("X"));
+// Displays 75BCD15
+Console.WriteLine(value.ToString("X2"));
+// Displays 75BCD15
+}
+}
+}
 using System;//
 class PrintMatrixApp {
 public static void Main(string[] args) {
