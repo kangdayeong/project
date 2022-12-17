@@ -1925,3 +1925,16 @@ foreach (string s in p)
 Console.WriteLine(s);
 }
 }
+          using System;
+class SystemrExThrowApp {
+public static void Exp(int ptr) {
+if (ptr == 0)
+throw new NullReferenceException();
+}
+public static void Main() {
+int i = 0;
+// SystemExThrowApp.Exp(i);
+Exp(i); // 동일 클래스의 static 메소드는 호출 시 클래스명 제외 가능
+}
+}
+
