@@ -980,7 +980,7 @@ Console.WriteLine("ReadLine Result : {0}", name);
 }
 }
 }
-using System;
+using System;//
 class ReadLineApp {
 public static void Main() {
 int time, hour, minute, second;
