@@ -1493,7 +1493,7 @@ Console.WriteLine("static x = " + LocalVariableApp.x);
 Console.WriteLine("local x = " + x);
 }
 }
-using System;
+using System;//
 using System.Numerics;
 using System.Globalization;
 class Demo
