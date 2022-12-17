@@ -2432,3 +2432,14 @@ textBox1.Text = “”: } }
 private void button2_Click(object sender, EventArgs e) {
 if (listBox1.SelectedIndex > -1)
 listBox1.Items.RemoveAt(listBox1.SelectedIndex); }
+private void button1_Click(object sender, EventArgs e)
+{
+panel1.Invalidate();
+}
+private void panel1_Paint(object sender, PaintEventArgs e)
+{
+Graphics g = e.Graphics;
+Random r = new Random();
+Color c = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
+g.FillRectangle(new SolidBrush(c), e.ClipRectangle);
+}
