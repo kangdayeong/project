@@ -544,3 +544,24 @@ Console.WriteLine("\npress any key to exit the process...");
 Console.ReadKey();
 }
 }
+
+
+using System;
+class GFG
+{
+// Main Method
+public static void Main()
+{
+// "DateTime" is a inbuilt class
+// for date and time
+DateTime d = DateTime.Now;
+// print the system date and time
+Console.WriteLine("System date: {0:d}\n" +
+"System time: {0:t}", d);
+Console.Write("Press 'E' to exit the process...");
+// here it ask to press "E" to exit
+while (Console.ReadKey().Key != ConsoleKey.E)
+{
+}
+}
+}
