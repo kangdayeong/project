@@ -2270,7 +2270,7 @@ int i = 0;
 // SystemExThrowApp.Exp(i);
 Exp(i); // 동일 클래스의 static 메소드는 호출 시 클래스명 제외 가능
 }
-}
+}//
 using System;
 class UserExceptionOne : ApplicationException { }
 class UserExceptionTwo : ApplicationException { }
