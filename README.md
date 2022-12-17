@@ -1314,7 +1314,7 @@ goto default;
 default : Console.WriteLine(“In default\n”);
 break;
 }
-/
+///
 using System;
 class StringConstantApp {
 public static void Main() {
