@@ -292,7 +292,23 @@ Console.WriteLine("FALSE OR TRUE = " + (false || true));
 Console.WriteLine("FALSE OR FALSE = " + (false || false));
 }
 }
-
+using System;
+public class Program
+{
+public static void Main()
+{
+DataStore<string> cities = new DataStore<string>();
+cities.AddOrUpdate(0, "Mumbai");
+cities.AddOrUpdate(1, "Chicago");
+cities.AddOrUpdate(2, "London");
+Console.WriteLine(cities.GetData(100));
+DataStore<int> empIds = new DataStore<int>();
+empIds.AddOrUpdate(0, 50);
+empIds.AddOrUpdate(1, 65);
+empIds.AddOrUpdate(2, 89);
+Console.WriteLine(empIds.GetData(0));
+}
+}
 using System;
 class IntegerConstantApp {
 public static void Main() {
