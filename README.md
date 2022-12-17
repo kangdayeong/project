@@ -388,6 +388,14 @@ Console.WriteLine("num2 does not have value.");
 }
 }
 
-
+public class SiteMemner
+{
+bool _getMarried;
+public bool GetMarried
+{
+get { return _getMarried;}
+set { _getMarried = value: }
+}
+}
 
 
