@@ -511,3 +511,18 @@ second = time % 100;
 Console.WriteLine(“*** Time is ” + hour + “:” + minute + “:” + second);
 }
 }
+using System;
+namespace ConsoleApp1
+{
+internal class Program
+{
+static void Main(string[] args)
+{
+while(true)
+{
+ConsoleKeyInfo name = Console.ReadKey();
+Console.WriteLine("\n You Press : {0}", name.Key);
+}
+}
+}
+}
