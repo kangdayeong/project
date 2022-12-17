@@ -2393,7 +2393,7 @@ using System.Diagnostics; // 추가
 namespace WF_linklabel
 {
 public partial class Form1 : Form
-{
+{//
 public Form1()
 {
 InitializeComponent();
