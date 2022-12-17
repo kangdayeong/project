@@ -1245,7 +1245,7 @@ int value = 34561234;
 Console.WriteLine("decimal Value = {0, -15:D}", value);
 Console.WriteLine("decimal Value = {0:D10}", value);
 }
-}
+}//
 using System;
 class ReadIntegerApp {
 static int ReadInt() {
