@@ -767,6 +767,22 @@ Console.WriteLine("local x = " + x);
 }
 }
 using System;
+class DoWhileApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
+public static void Main() {
+int n, i;
+double h = 0.0;
+Console.Write("Enter a number = ");
+n = Console.Read() - '0';
+i = 1;
+do {
+h = h + 1/(double)i;
+i++;
+} while (i <= n);
+Console.WriteLine("n = " + n + ", h = " + h);
+}
+}
+
+using System;
 class SwitchStApp {
 public static void Main() {
 Console.Write("Enter the day number 1 ~ 7 : ");
