@@ -432,7 +432,29 @@ Console.Write("i = " + i);
 Console.WriteLine(", x = " + x);
 }
 }
-
+using System;
+using System.Globalization; // CultureInfo Class
+namespace Currency_IO_test
+{
+class Program
+{
+static void Main(string[] args)
+{
+double value = 12345.6789;
+Console.WriteLine(value.ToString("C", CultureInfo.CurrentCulture));
+Console.WriteLine(value.ToString("C3", CultureInfo.CurrentCulture));
+Console.WriteLine("The current culture is now {0}",
+CultureInfo.CurrentCulture.Name);
+CultureInfo newUICulture;
+newUICulture = new CultureInfo("en-US");
+CultureInfo.CurrentUICulture = newUICulture;
+Console.WriteLine(value.ToString("C", CultureInfo.CurrentUICulture));
+Console.WriteLine(value.ToString("C3", CultureInfo.CurrentUICulture));
+Console.WriteLine("The current UI culture is now {0}",
+CultureInfo.CurrentUICulture.Name);
+}
+}
+}
 using System;
 class RemainderOperatorApp {
 public static void Main() {
