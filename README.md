@@ -1416,7 +1416,7 @@ Console.WriteLine("x={0}, y={1}", x, y);
 
 using System;
 class IfStApp {
-public static void Main() {
+public static void Main() {//
 int n;
 Console.Write("Enter a number = ");
 n = Console.Read() - '0';
