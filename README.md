@@ -114,6 +114,16 @@ if (h == l) Console.WriteLine("Yes");
 else Console.WriteLine("No");
 }
 }
+using System;
+class IntTypeApp {
+public static void Main() {
+int i = 1000000;
+Console.WriteLine(i * i);
+long l = i;
+Console.WriteLine(l * l);
+}
+}
+
 
 using System;
 namespace standard_output_2
