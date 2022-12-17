@@ -1496,7 +1496,7 @@ Console.WriteLine("local x = " + x);
 using System;//
 using System.Numerics;
 using System.Globalization;
-class Demo
+class Demo//
 {
 static void Main()
 {
