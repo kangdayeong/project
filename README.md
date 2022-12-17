@@ -2365,4 +2365,18 @@ listView1.Columns.Add(columnHeader1);
 listView1.Columns.Add(columnHeader2);
 listView1.Columns.Add(columnHeader3);
 } 
-
+private void Button1_Click(object sender, EventArgs e) {
+listView1.Items.Remove(listView1.SelectedItems[0]);
+}
+private void Button2_Click(object sender, EventArgs e) {
+listView1.Items.Clear();
+}
+private void Button3_Click(object sender, EventArgs e) {
+ListViewItem lv1 = new ListViewItem(textBox1.Text);
+lv1.SubItems.Add(textBox2.Text);
+lv1.SubItems.Add(textBox3.Text);
+listView1.Items.Add(lv1);
+textBox1.Text = "";
+textBox2.Text = "";
+textBox3.Text = "";
+}
