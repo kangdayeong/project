@@ -1414,3 +1414,17 @@ Console.WriteLine("static x = " + LocalVariableApp.x);
 Console.WriteLine("local x = " + x);
 }
 }
+using System;
+using System.Numerics;
+using System.Globalization;
+class Demo
+{
+static void Main()
+{
+double doubleVal = 0.91234582637;
+string str = doubleVal.ToString("R", CultureInfo.InvariantCulture);
+double resRound = double.Parse(str, CultureInfo.InvariantCulture);
+// round-trip Double with 'R'
+Console.WriteLine(doubleVal.Equals(resRound));
+}
+}
