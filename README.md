@@ -132,7 +132,22 @@ long l = i;
 Console.WriteLine(l * l);
 }
 }
-
+using System;
+class PointerApp {
+unsafe public static void Swap(int* px, int* py) {
+int tmp = *px;
+*px = *py;
+*py = tmp;
+}
+public static void Main() {
+int x = 1, y = 2;
+Console.WriteLine("Before : x = " + x + ", y = " + y);
+unsafe {
+Swap(&x, &y);
+}
+Console.WriteLine(" After : x = " + x + ", y = " + y);
+}
+}
 
 using System;
 namespace standard_output_2
