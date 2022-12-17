@@ -1134,6 +1134,29 @@ i++;
 Console.WriteLine("n = {0}, h = {1}", n, h);
 }
 }
+            using System;
+public class Program
+{
+public static void Main()
+{
+DataStore<string> strStore = new DataStore<string>();
+strStore.Data = "Hello World!";
+//strStorage.Data = 123; // compile-time error
+Console.WriteLine(strStore.Data);
+DataStore<int> intStore = new DataStore<int>();
+intStore.Data = 100;
+//intStorage.Data = "Hello World!"; // compile-time error
+Console.WriteLine(intStore.Data);
+KeyValuePair<int, string> kvp1 = new KeyValuePair<int, string>();
+kvp1.Key = 100;
+kvp1.Value = "Hundred";
+Console.WriteLine(kvp1.Key + ", " + kvp1.Value);
+KeyValuePair<string, string> kvp2 = new KeyValuePair<string, string>();
+kvp2.Key = "IT";
+kvp2.Value = "Information Technology";
+Console.WriteLine(kvp2.Key + ", " + kvp2.Value);
+}
+}
 using System;
 class SwitchWithString
 {
