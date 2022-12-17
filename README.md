@@ -1551,7 +1551,7 @@ return n;
 public static void Main() {
 Console.Write("*** input data : ");
 Console.WriteLine("*** read data : " + ReadInt() + " " + ReadInt());
-}
+}//
 }
   
   class DataStore<T>
