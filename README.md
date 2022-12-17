@@ -2325,5 +2325,22 @@ t1.Name = "Apple"; t2.Name = "Orange";
 t1.Start(); t2.Start();
 }
 }
+private void radioButton4_CheckedChanged(object sender, EventArgs e) {
+if (radioButton4.Checked)
+// 리스트 뷰의 항목을 자세한 리스트 형태로 보여준다.
+listView1.View = View.Details;
+}
+private void radioButton5_CheckedChanged(object sender, EventArgs e) {
+if (radioButton5.Checked)
+// 리스트 뷰의 항목을 타일 형태로 보여준다.
+listView1.View = View.Tile;
+}
+private void listView1_Click(object sender, EventArgs e) {
+foreach (ListViewItem item in listView1.SelectedItems) {
+ListViewItem.ListViewSubItemCollection subItem = item.SubItems;
+// 각 항목에 대한 부항목을 얻기 위해 SubItems 프로퍼티를 사용
+label1.Text = subItem[0].Text + "의 국가번호는 " + subItem[1].Text + "입니다.";
+}
+}
 
 
