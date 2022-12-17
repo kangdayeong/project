@@ -1112,6 +1112,19 @@ default: Console.WriteLine("Illegal day"); break;
 }
 }
 }
+  interface IGenericInterface<T> {
+void SetValue(T x);
+string GetValueType();
+}
+class GenericClass<T> : IGenericInterface<T> {
+private T value;
+public void SetValue(T x) {
+value = x;
+}
+public String GetValueType(){
+return value.GetType().ToString();
+}
+}
 using System
 namespace ConsoleApp1
 {
