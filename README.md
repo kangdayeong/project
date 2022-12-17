@@ -1173,6 +1173,23 @@ Console.WriteLine("*** read data : " + ReadInt() + " " + ReadInt());
 }
 }
 using System;
+namespace litrals
+{
+class Literally
+{
+static void Main(string[] args)
+{
+int myDecimal = 28;
+int myOctal = 034;
+int myHex = 0X1C;
+Console.WriteLine($"The variable {nameof(myDecimal)} has value: {myDecimal}");
+Console.WriteLine($"The variable {nameof(myOctal)} has value: {myOctal}");
+Console.WriteLine($"The variable {nameof(myHex)} has value: {myHex}");
+Console.ReadKey(); ;
+}
+}
+}
+using System;
 namespace string_compare
 {
 class Program
