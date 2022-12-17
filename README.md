@@ -1287,7 +1287,7 @@ return n;
 public static void Main() {
 Console.Write("*** input data : ");
 Console.WriteLine("*** read data : " + ReadInt() + " " + ReadInt());
-}
+}//
 }
 using System;
 class BreakStApp { // h(n) = 1 + 1/2 + 1/3 + ... + 1/n
